@@ -1,4 +1,8 @@
 // @import './superslides.scss';
-@import './responsive.scss';
-@import './style.scss';
-@import "~bootstrap/scss/bootstrap";
+@import "./bootstrap.min.scss";
+@import "./style.scss";
+@import "./classic.scss";
+@import "./classic.date.scss";
+@import "./classic.time.scss";
+
+@import "./responsive.scss";
