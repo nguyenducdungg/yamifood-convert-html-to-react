@@ -1,15 +1,19 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Logo from "../../images/logo.png";
 const Header = () => {
   return (
-    <header class="top-navbar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" />
-          </a>
+    <header className="top-navbar">
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">
+            <Link to="/">
+              <img src={Logo} alt="" />
+            </Link>
+          </Navbar.Brand>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbars-rs-food"
@@ -17,73 +21,73 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbars-rs-food">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+          <div className="collapse navbar-collapse" id="navbars-rs-food">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item active">
+                <Link className="nav-link" to="/">
                   Home
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="menu.html">
+              <li className="nav-item">
+                <Link className="nav-link" to="menu.html">
                   Menu
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">
+              <li className="nav-item">
+                <Link className="nav-link" to="about.html">
                   About
-                </a>
+                </Link>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="#"
                   id="dropdown-a"
                   data-toggle="dropdown"
                 >
                   Pages
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                  <a class="dropdown-item" href="reservation.html">
+                </Link>
+                <div className="dropdown-menu" aria-labelledby="dropdown-a">
+                  <Link className="dropdown-item" to="reservation.html">
                     Reservation
-                  </a>
-                  <a class="dropdown-item" href="stuff.html">
+                  </Link>
+                  <Link className="dropdown-item" to="stuff.html">
                     Stuff
-                  </a>
-                  <a class="dropdown-item" href="gallery.html">
+                  </Link>
+                  <Link className="dropdown-item" to="gallery.html">
                     Gallery
-                  </a>
+                  </Link>
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="#"
                   id="dropdown-a"
                   data-toggle="dropdown"
                 >
                   Blog
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                  <a class="dropdown-item" href="blog.html">
+                </Link>
+                <div className="dropdown-menu" aria-labelledby="dropdown-a">
+                  <Link className="dropdown-item" to="blog.html">
                     blog
-                  </a>
-                  <a class="dropdown-item" href="blog-details.html">
+                  </Link>
+                  <Link className="dropdown-item" to="blog-details.html">
                     blog Single
-                  </a>
+                  </Link>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">
+              <li className="nav-item">
+                <Link className="nav-link" to="contact.html">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </Container>
+      </Navbar>
     </header>
   );
 };
